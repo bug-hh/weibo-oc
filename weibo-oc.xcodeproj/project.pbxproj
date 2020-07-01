@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */; };
+		68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */; };
+		68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBA824AD2E04004F1A75 /* Assets.xcassets */; };
+		68FFBBAC24AD2E04004F1A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBAA24AD2E04004F1A75 /* LaunchScreen.storyboard */; };
+		68FFBBAF24AD2E04004F1A75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBAE24AD2E04004F1A75 /* main.m */; };
+		68FFBBC324AD4A6B004F1A75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBC224AD4A6B004F1A75 /* MainViewController.m */; };
+		68FFBBC624AD4A8C004F1A75 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBC524AD4A8C004F1A75 /* ProfileTableViewController.m */; };
+		68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBC824AD4ABC004F1A75 /* MessageTableViewController.m */; };
+		68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBCB24AD4ACF004F1A75 /* DiscoveryTableViewController.m */; };
+		68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */; };
+		68FFBBD224AD4AED004F1A75 /* OAuthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */; };
+		68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBD424AD4AFE004F1A75 /* ComposeTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		68FFBB9924AD2E00004F1A75 /* weibo-oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weibo-oc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68FFBB9F24AD2E00004F1A75 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		68FFBBA824AD2E04004F1A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68FFBBAB24AD2E04004F1A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68FFBBAD24AD2E04004F1A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FFBBAE24AD2E04004F1A75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68FFBBC124AD4A6B004F1A75 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		68FFBBC224AD4A6B004F1A75 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		68FFBBC424AD4A8C004F1A75 /* ProfileTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		68FFBBC524AD4A8C004F1A75 /* ProfileTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		68FFBBC724AD4ABC004F1A75 /* MessageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		68FFBBC824AD4ABC004F1A75 /* MessageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		68FFBBCA24AD4ACF004F1A75 /* DiscoveryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoveryTableViewController.h; sourceTree = "<group>"; };
+		68FFBBCB24AD4ACF004F1A75 /* DiscoveryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoveryTableViewController.m; sourceTree = "<group>"; };
+		68FFBBCD24AD4ADE004F1A75 /* HomeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		68FFBBD024AD4AED004F1A75 /* OAuthTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuthTableViewController.h; sourceTree = "<group>"; };
+		68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAuthTableViewController.m; sourceTree = "<group>"; };
+		68FFBBD324AD4AFE004F1A75 /* ComposeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeTableViewController.h; sourceTree = "<group>"; };
+		68FFBBD424AD4AFE004F1A75 /* ComposeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68FFBB9624AD2E00004F1A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68FFBB9024AD2E00004F1A75 = {
+			isa = PBXGroup;
+			children = (
+				68FFBB9B24AD2E00004F1A75 /* weibo-oc */,
+				68FFBB9A24AD2E00004F1A75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68FFBB9A24AD2E00004F1A75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBB9924AD2E00004F1A75 /* weibo-oc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68FFBB9B24AD2E00004F1A75 /* weibo-oc */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBB524AD2E66004F1A75 /* Classes */,
+				68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */,
+				68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */,
+				68FFBB9F24AD2E00004F1A75 /* SceneDelegate.h */,
+				68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */,
+				68FFBBA824AD2E04004F1A75 /* Assets.xcassets */,
+				68FFBBAA24AD2E04004F1A75 /* LaunchScreen.storyboard */,
+				68FFBBAD24AD2E04004F1A75 /* Info.plist */,
+				68FFBBAE24AD2E04004F1A75 /* main.m */,
+			);
+			path = "weibo-oc";
+			sourceTree = "<group>";
+		};
+		68FFBBB524AD2E66004F1A75 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBB924AD2EA4004F1A75 /* View */,
+				68FFBBB824AD2E9C004F1A75 /* Tools */,
+				68FFBBB724AD2E8E004F1A75 /* ViewModel */,
+				68FFBBB624AD2E85004F1A75 /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		68FFBBB624AD2E85004F1A75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68FFBBB724AD2E8E004F1A75 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		68FFBBB824AD2E9C004F1A75 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		68FFBBB924AD2EA4004F1A75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBC024AD2F71004F1A75 /* Main */,
+				68FFBBBF24AD2F67004F1A75 /* Profile */,
+				68FFBBBE24AD2F5F004F1A75 /* Message */,
+				68FFBBBD24AD2F54004F1A75 /* Discovery */,
+				68FFBBBC24AD2F48004F1A75 /* Home */,
+				68FFBBBB24AD2F34004F1A75 /* OAuth */,
+				68FFBBBA24AD2F27004F1A75 /* Compose */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68FFBBBA24AD2F27004F1A75 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBD324AD4AFE004F1A75 /* ComposeTableViewController.h */,
+				68FFBBD424AD4AFE004F1A75 /* ComposeTableViewController.m */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		68FFBBBB24AD2F34004F1A75 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBD024AD4AED004F1A75 /* OAuthTableViewController.h */,
+				68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		68FFBBBC24AD2F48004F1A75 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBCD24AD4ADE004F1A75 /* HomeTableViewController.h */,
+				68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		68FFBBBD24AD2F54004F1A75 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBCA24AD4ACF004F1A75 /* DiscoveryTableViewController.h */,
+				68FFBBCB24AD4ACF004F1A75 /* DiscoveryTableViewController.m */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		68FFBBBE24AD2F5F004F1A75 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBC724AD4ABC004F1A75 /* MessageTableViewController.h */,
+				68FFBBC824AD4ABC004F1A75 /* MessageTableViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		68FFBBBF24AD2F67004F1A75 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBC424AD4A8C004F1A75 /* ProfileTableViewController.h */,
+				68FFBBC524AD4A8C004F1A75 /* ProfileTableViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		68FFBBC024AD2F71004F1A75 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				68FFBBC124AD4A6B004F1A75 /* MainViewController.h */,
+				68FFBBC224AD4A6B004F1A75 /* MainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68FFBB9824AD2E00004F1A75 /* weibo-oc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68FFBBB224AD2E04004F1A75 /* Build configuration list for PBXNativeTarget "weibo-oc" */;
+			buildPhases = (
+				68FFBB9524AD2E00004F1A75 /* Sources */,
+				68FFBB9624AD2E00004F1A75 /* Frameworks */,
+				68FFBB9724AD2E00004F1A75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "weibo-oc";
+			productName = "weibo-oc";
+			productReference = 68FFBB9924AD2E00004F1A75 /* weibo-oc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68FFBB9124AD2E00004F1A75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = bughh;
+				TargetAttributes = {
+					68FFBB9824AD2E00004F1A75 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 68FFBB9424AD2E00004F1A75 /* Build configuration list for PBXProject "weibo-oc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68FFBB9024AD2E00004F1A75;
+			productRefGroup = 68FFBB9A24AD2E00004F1A75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68FFBB9824AD2E00004F1A75 /* weibo-oc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68FFBB9724AD2E00004F1A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FFBBAC24AD2E04004F1A75 /* LaunchScreen.storyboard in Resources */,
+				68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68FFBB9524AD2E00004F1A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */,
+				68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */,
+				68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */,
+				68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */,
+				68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */,
+				68FFBBAF24AD2E04004F1A75 /* main.m in Sources */,
+				68FFBBC624AD4A8C004F1A75 /* ProfileTableViewController.m in Sources */,
+				68FFBBD224AD4AED004F1A75 /* OAuthTableViewController.m in Sources */,
+				68FFBBC324AD4A6B004F1A75 /* MainViewController.m in Sources */,
+				68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		68FFBBAA24AD2E04004F1A75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FFBBAB24AD2E04004F1A75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68FFBBB024AD2E04004F1A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68FFBBB124AD2E04004F1A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68FFBBB324AD2E04004F1A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "weibo-oc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bughh.weibo-oc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		68FFBBB424AD2E04004F1A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "weibo-oc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bughh.weibo-oc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68FFBB9424AD2E00004F1A75 /* Build configuration list for PBXProject "weibo-oc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FFBBB024AD2E04004F1A75 /* Debug */,
+				68FFBBB124AD2E04004F1A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68FFBBB224AD2E04004F1A75 /* Build configuration list for PBXNativeTarget "weibo-oc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FFBBB324AD2E04004F1A75 /* Debug */,
+				68FFBBB424AD2E04004F1A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68FFBB9124AD2E00004F1A75 /* Project object */;
+}

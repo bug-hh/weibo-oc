@@ -11,6 +11,7 @@
 #import "MessageTableViewController.h"
 #import "DiscoveryTableViewController.h"
 #import "ProfileTableViewController.h"
+#import "UIButton+Convenience.h"
 
 @interface MainViewController ()
 
@@ -20,22 +21,22 @@
 
 @implementation MainViewController
 
-// 懒加载 compose button
+// MARK: 懒加载 compose button
 - (UIButton *)composeButton {
     if (!_composeButton) {
-        UIButton *button = [[UIButton alloc] init];
-        [button setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
-        [button setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
-        // 根据图片调整大小
-        [button sizeToFit];
+        UIButton *button = [[UIButton alloc] initWithImageName:@"tabbar_compose_icon_add" andBackgroundImageName:@"tabbar_compose_button"];
         _composeButton = button;
     }
-    
     return _composeButton;
 }
 
+// MARK: 监听方法
+- (void)composeButtonClicked {
+    NSLog(@"点我了");
+    
+}
+
+// MARK: 视图生命周期函数
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 添加控制器，并不会添加 tabbar 中的按钮，因为控件时懒加载的，所有控件都是延迟创建的
@@ -49,6 +50,7 @@
     [self.tabBar bringSubviewToFront:self.composeButton];
 }
 
+// MARK: 设置界面
 - (void)setupComposedButton {
     // 添加 button
     [self.tabBar addSubview:self.composeButton];
@@ -57,6 +59,8 @@
     // 下面两种方法都可以
     self.composeButton.frame = CGRectMake(2 * w, 0, w, h);
 //    self.composeButton.frame = CGRectInset(self.tabBar.bounds, 2 * w, 0);
+    // 添加监听方法
+    [self.composeButton addTarget:self action:@selector(composeButtonClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)addAllChildVC {

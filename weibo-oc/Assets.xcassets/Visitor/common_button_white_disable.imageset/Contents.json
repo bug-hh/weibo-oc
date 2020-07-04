@@ -9,10 +9,10 @@
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 9,
-          "left" : 11,
-          "right" : 10,
-          "top" : 9
+          "bottom" : 8,
+          "left" : 12,
+          "right" : 9,
+          "top" : 8
         },
         "center" : {
           "height" : 1,

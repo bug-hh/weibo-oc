@@ -47,7 +47,10 @@
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] init];
         _textLabel.text = @"关注一些人，回这里看看有什么惊喜";
-        _textLabel.textColor = [UIColor blackColor];
+        _textLabel.textColor = [UIColor darkGrayColor];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+        // 设置文字多行显示
+        _textLabel.numberOfLines = 0;
         [_textLabel sizeToFit];
     }
     return _textLabel;
@@ -69,10 +72,10 @@
         _loginButton = [[UIButton alloc] init];
         [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
         [_loginButton setBackgroundImage:[UIImage imageNamed:@"common_button_white_disable"] forState:UIControlStateNormal];
-        [_loginButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        [_loginButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [_loginButton sizeToFit];
     }
-    return _registerButton;
+    return _loginButton;
 }
 
 #pragma mark 重写构造函数
@@ -83,10 +86,39 @@
     return self;
 }
 
+#pragma mark 开启首页转轮动画
+- (void)startAnimation {
+    CABasicAnimation *animation = [[CABasicAnimation alloc] init];
+    animation.keyPath = @"transform.rotation";
+    // @(value) 获得一个指向 value 的NSNumber 的指针
+    animation.toValue = @(2 * M_PI);
+    animation.duration = 20;
+    // 用在不断重复的动画上，当动画绑定的图层对应的视图销毁时，动画会自动释放
+    animation.removedOnCompletion = NO;
+    [self.iconView.layer addAnimation:animation forKey:nil];
+}
+
+#pragma mark 设置页面信息
+- (void)setupInfo:(NSString* __nullable)imageName andTitle:(NSString*)title {
+    // 如果 imageName 为 nil，表示的是首页的访客界面
+    if (!imageName) {
+        // 如果是首页的访客视图，则开启动画
+        [self startAnimation];
+        return;
+    }
+    [self.iconView setImage:[UIImage imageNamed:imageName]];
+    [self.textLabel setText:title];
+    // 非首页，隐藏掉房子图片
+    self.homeImageView.hidden = YES;
+    // 把首页遮罩放到最底下
+    [self sendSubviewToBack:self.maskImageView];
+
+}
+
 #pragma mark 设置界面
 - (void)setupUI {
     [self addSubview:self.iconView];
-//    [self addSubview:self.maskImageView];
+    [self addSubview:self.maskImageView];
     [self addSubview:self.homeImageView];
     [self addSubview:self.textLabel];
     [self addSubview:self.registerButton];
@@ -121,7 +153,6 @@
 
     NSLayoutConstraint *textTop = [NSLayoutConstraint constraintWithItem:self.textLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.iconView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:36];
 
-    // 在 oc 里加上这个宽度约束，会崩溃，但在 swift 中不会
     NSLayoutConstraint *textWidth = [NSLayoutConstraint constraintWithItem:self.textLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:300];
 
     [self addConstraint:textConX];
@@ -143,31 +174,34 @@
     [self addConstraint:registerHeight];
     
     // 设置登录按钮
-//    NSLayoutConstraint *loginRight = [NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.textLabel attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    NSLayoutConstraint *loginRight = [NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.textLabel attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
 
     NSLayoutConstraint *loginTop = [NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.textLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:16];
 //
     NSLayoutConstraint *loginWidth = [NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100];
     NSLayoutConstraint *loginHeight = [NSLayoutConstraint constraintWithItem:self.loginButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:40];
 ////
-//    [self addConstraint:loginRight];
+    [self addConstraint:loginRight];
     [self addConstraint:loginTop];
     [self addConstraint:loginWidth];
     [self addConstraint:loginHeight];
     
     // 设置遮罩
-//    NSLayoutConstraint *maskLeft = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
-//
-//    NSLayoutConstraint *maskRight = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
-//
-//    NSLayoutConstraint *maskTop = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:16];
-//
-//    NSLayoutConstraint *maskBottom = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.registerButton attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-40];
-//
-//    [self addConstraint:maskLeft];
-//    [self addConstraint:maskRight];
-//    [self addConstraint:maskTop];
-//    [self addConstraint:maskBottom];
+    NSLayoutConstraint *maskLeft = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+
+    NSLayoutConstraint *maskRight = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+
+    NSLayoutConstraint *maskTop = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:16];
+
+    NSLayoutConstraint *maskBottom = [NSLayoutConstraint constraintWithItem:self.maskImageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.registerButton attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-40];
+
+    [self addConstraint:maskLeft];
+    [self addConstraint:maskRight];
+    [self addConstraint:maskTop];
+    [self addConstraint:maskBottom];
+    
+    // 灰度图 R = G = B
+    self.backgroundColor = [UIColor colorWithWhite:237.0 / 255.0 alpha:1.0];
     
 }
 

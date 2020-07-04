@@ -35,8 +35,8 @@
 
 #pragma mark 设置访客视图
 - (void)setupVisitorView {
-    self.view = [[VisitorView alloc] init];
-    
+    self.visitorView = [[VisitorView alloc] init];
+    self.view = self.visitorView;
 }
 
 #pragma mark - Table view data source

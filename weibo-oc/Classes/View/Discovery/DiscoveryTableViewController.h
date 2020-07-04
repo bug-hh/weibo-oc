@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VisitorTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DiscoveryTableViewController : UITableViewController
+@interface DiscoveryTableViewController : VisitorTableViewController
 
 @end
 

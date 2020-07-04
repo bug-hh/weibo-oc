@@ -1,8 +1,8 @@
 //
-//  OAuthTableViewController.h
+//  OAuthViewController.h
 //  weibo-oc
 //
-//  Created by bughh on 2020/7/2.
+//  Created by 彭豪辉 on 2020/7/4.
 //  Copyright © 2020 bughh. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OAuthTableViewController : UITableViewController
+@interface OAuthViewController : UIViewController
 
 @end
 

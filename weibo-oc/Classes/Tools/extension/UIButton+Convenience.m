@@ -21,4 +21,14 @@
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title andColor:(UIColor *)color andBgImageName:(NSString *)imageName {
+    if (self = [super init]) {
+        [self setTitle:title forState:UIControlStateNormal];
+        [self setTitleColor:color forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [self sizeToFit];
+    }
+    return self;
+}
+
 @end

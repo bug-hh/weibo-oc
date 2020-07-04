@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56072DDA52D425319741DFCF /* Pods_weibo_oc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913ED6AAAB54DC6683E43C2 /* Pods_weibo_oc.framework */; };
+		66547CF324B02F28002CD068 /* UILabel+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 66547CF224B02F28002CD068 /* UILabel+Convenience.m */; };
+		66547CF624B030E3002CD068 /* UIImageView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 66547CF524B030E3002CD068 /* UIImageView+Convenience.m */; };
+		6696AF4F24B04F3400163399 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696AF4E24B04F3400163399 /* NetworkTools.m */; };
+		6696AF5224B088F800163399 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696AF5124B088F800163399 /* OAuthViewController.m */; };
 		68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */; };
 		68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */; };
 		68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBA824AD2E04004F1A75 /* Assets.xcassets */; };
@@ -17,7 +22,6 @@
 		68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBC824AD4ABC004F1A75 /* MessageTableViewController.m */; };
 		68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBCB24AD4ACF004F1A75 /* DiscoveryTableViewController.m */; };
 		68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */; };
-		68FFBBD224AD4AED004F1A75 /* OAuthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */; };
 		68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBD424AD4AFE004F1A75 /* ComposeTableViewController.m */; };
 		68FFBBDC24AE8E9B004F1A75 /* UIButton+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBDB24AE8E9B004F1A75 /* UIButton+Convenience.m */; };
 		68FFBBE024AE996D004F1A75 /* VisitorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBDF24AE996D004F1A75 /* VisitorTableViewController.m */; };
@@ -25,6 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FA0AC40A24629F13E227270 /* Pods-weibo-oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo-oc.debug.xcconfig"; path = "Target Support Files/Pods-weibo-oc/Pods-weibo-oc.debug.xcconfig"; sourceTree = "<group>"; };
+		2976E380D3E46BBE274AEFB7 /* Pods-weibo-oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo-oc.release.xcconfig"; path = "Target Support Files/Pods-weibo-oc/Pods-weibo-oc.release.xcconfig"; sourceTree = "<group>"; };
+		66547CF124B02F28002CD068 /* UILabel+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Convenience.h"; sourceTree = "<group>"; };
+		66547CF224B02F28002CD068 /* UILabel+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Convenience.m"; sourceTree = "<group>"; };
+		66547CF424B030E3002CD068 /* UIImageView+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Convenience.h"; sourceTree = "<group>"; };
+		66547CF524B030E3002CD068 /* UIImageView+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Convenience.m"; sourceTree = "<group>"; };
+		66547CF724B03C16002CD068 /* Common.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.pch; sourceTree = "<group>"; };
+		6696AF4D24B04F3400163399 /* NetworkTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		6696AF4E24B04F3400163399 /* NetworkTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		6696AF5024B088F800163399 /* OAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuthViewController.h; sourceTree = "<group>"; };
+		6696AF5124B088F800163399 /* OAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAuthViewController.m; sourceTree = "<group>"; };
 		68FFBB9924AD2E00004F1A75 /* weibo-oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weibo-oc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,8 +59,6 @@
 		68FFBBCB24AD4ACF004F1A75 /* DiscoveryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoveryTableViewController.m; sourceTree = "<group>"; };
 		68FFBBCD24AD4ADE004F1A75 /* HomeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
-		68FFBBD024AD4AED004F1A75 /* OAuthTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuthTableViewController.h; sourceTree = "<group>"; };
-		68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAuthTableViewController.m; sourceTree = "<group>"; };
 		68FFBBD324AD4AFE004F1A75 /* ComposeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeTableViewController.h; sourceTree = "<group>"; };
 		68FFBBD424AD4AFE004F1A75 /* ComposeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeTableViewController.m; sourceTree = "<group>"; };
 		68FFBBDA24AE8E9B004F1A75 /* UIButton+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Convenience.h"; sourceTree = "<group>"; };
@@ -54,6 +67,7 @@
 		68FFBBDF24AE996D004F1A75 /* VisitorTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorTableViewController.m; sourceTree = "<group>"; };
 		68FFBBE124AE9D74004F1A75 /* VisitorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisitorView.h; sourceTree = "<group>"; };
 		68FFBBE224AE9D74004F1A75 /* VisitorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorView.m; sourceTree = "<group>"; };
+		D913ED6AAAB54DC6683E43C2 /* Pods_weibo_oc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo_oc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56072DDA52D425319741DFCF /* Pods_weibo_oc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50AFDD3DAEF28F3632B8FA47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D913ED6AAAB54DC6683E43C2 /* Pods_weibo_oc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68FFBB9024AD2E00004F1A75 = {
 			isa = PBXGroup;
 			children = (
 				68FFBB9B24AD2E00004F1A75 /* weibo-oc */,
 				68FFBB9A24AD2E00004F1A75 /* Products */,
+				DEDAF621E081258BAF9C95A9 /* Pods */,
+				50AFDD3DAEF28F3632B8FA47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				68FFBBD624AE8D1C004F1A75 /* extension */,
+				66547CF724B03C16002CD068 /* Common.pch */,
+				6696AF4D24B04F3400163399 /* NetworkTools.h */,
+				6696AF4E24B04F3400163399 /* NetworkTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -158,8 +186,8 @@
 		68FFBBBB24AD2F34004F1A75 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				68FFBBD024AD4AED004F1A75 /* OAuthTableViewController.h */,
-				68FFBBD124AD4AED004F1A75 /* OAuthTableViewController.m */,
+				6696AF5024B088F800163399 /* OAuthViewController.h */,
+				6696AF5124B088F800163399 /* OAuthViewController.m */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -215,6 +243,10 @@
 			children = (
 				68FFBBDA24AE8E9B004F1A75 /* UIButton+Convenience.h */,
 				68FFBBDB24AE8E9B004F1A75 /* UIButton+Convenience.m */,
+				66547CF124B02F28002CD068 /* UILabel+Convenience.h */,
+				66547CF224B02F28002CD068 /* UILabel+Convenience.m */,
+				66547CF424B030E3002CD068 /* UIImageView+Convenience.h */,
+				66547CF524B030E3002CD068 /* UIImageView+Convenience.m */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -230,6 +262,15 @@
 			path = Visitor;
 			sourceTree = "<group>";
 		};
+		DEDAF621E081258BAF9C95A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FA0AC40A24629F13E227270 /* Pods-weibo-oc.debug.xcconfig */,
+				2976E380D3E46BBE274AEFB7 /* Pods-weibo-oc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FFBBB224AD2E04004F1A75 /* Build configuration list for PBXNativeTarget "weibo-oc" */;
 			buildPhases = (
+				CD89E2CEC02376C8F2EC4134 /* [CP] Check Pods Manifest.lock */,
 				68FFBB9524AD2E00004F1A75 /* Sources */,
 				68FFBB9624AD2E00004F1A75 /* Frameworks */,
 				68FFBB9724AD2E00004F1A75 /* Resources */,
+				D9469FC9C744CA2E03C79600 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,22 +337,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD89E2CEC02376C8F2EC4134 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-weibo-oc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9469FC9C744CA2E03C79600 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-weibo-oc/Pods-weibo-oc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-weibo-oc/Pods-weibo-oc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weibo-oc/Pods-weibo-oc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68FFBB9524AD2E00004F1A75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6696AF5224B088F800163399 /* OAuthViewController.m in Sources */,
 				68FFBBE324AE9D74004F1A75 /* VisitorView.m in Sources */,
 				68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */,
 				68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */,
 				68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */,
+				6696AF4F24B04F3400163399 /* NetworkTools.m in Sources */,
 				68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */,
 				68FFBBDC24AE8E9B004F1A75 /* UIButton+Convenience.m in Sources */,
 				68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */,
 				68FFBBAF24AD2E04004F1A75 /* main.m in Sources */,
 				68FFBBC624AD4A8C004F1A75 /* ProfileTableViewController.m in Sources */,
-				68FFBBD224AD4AED004F1A75 /* OAuthTableViewController.m in Sources */,
+				66547CF324B02F28002CD068 /* UILabel+Convenience.m in Sources */,
 				68FFBBC324AD4A6B004F1A75 /* MainViewController.m in Sources */,
+				66547CF624B030E3002CD068 /* UIImageView+Convenience.m in Sources */,
 				68FFBBE024AE996D004F1A75 /* VisitorTableViewController.m in Sources */,
 				68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */,
 			);
@@ -441,9 +529,12 @@
 		};
 		68FFBBB324AD2E04004F1A75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA0AC40A24629F13E227270 /* Pods-weibo-oc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/weibo-oc/Classes/Tools/Common.pch";
 				INFOPLIST_FILE = "weibo-oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,9 +549,12 @@
 		};
 		68FFBBB424AD2E04004F1A75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2976E380D3E46BBE274AEFB7 /* Pods-weibo-oc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/weibo-oc/Classes/Tools/Common.pch";
 				INFOPLIST_FILE = "weibo-oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

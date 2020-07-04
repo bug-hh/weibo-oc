@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VisitorTableViewController : UITableViewController
+@interface VisitorTableViewController : UITableViewController <VisitorDelegate>
 
 @property (strong, nonatomic) VisitorView *visitorView;
 

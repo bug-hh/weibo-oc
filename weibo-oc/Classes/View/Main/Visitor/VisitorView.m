@@ -24,58 +24,57 @@
 #pragma mark 懒加载访客视图子控件
 - (UIImageView *)iconView {
     if (!_iconView) {
-        _iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"visitordiscover_feed_image_smallicon"]];
+        _iconView = [[UIImageView alloc] initWithImageName:@"visitordiscover_feed_image_smallicon"];
     }
     return _iconView;
 }
 
 - (UIImageView *)maskImageView {
     if (!_maskImageView) {
-        _maskImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"visitordiscover_feed_mask_smallicon"]];
+        _maskImageView = [[UIImageView alloc] initWithImageName:@"visitordiscover_feed_mask_smallicon"];
     }
     return _maskImageView;
 }
 
 - (UIImageView *)homeImageView {
     if (!_homeImageView) {
-        _homeImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"visitordiscover_feed_image_house"]];
+        _homeImageView = [[UIImageView alloc] initWithImageName:@"visitordiscover_feed_image_house"];
     }
     return _homeImageView;
 }
 
 - (UILabel *)textLabel {
     if (!_textLabel) {
-        _textLabel = [[UILabel alloc] init];
-        _textLabel.text = @"关注一些人，回这里看看有什么惊喜";
-        _textLabel.textColor = [UIColor darkGrayColor];
-        _textLabel.textAlignment = NSTextAlignmentCenter;
-        // 设置文字多行显示
-        _textLabel.numberOfLines = 0;
-        [_textLabel sizeToFit];
+        _textLabel = [[UILabel alloc] initWithTitle:@"关注一些人，回这里看看有什么惊喜" andFontSize:18 andColor:[UIColor darkGrayColor]];
     }
     return _textLabel;
 }
 
 - (UIButton *)registerButton {
     if (!_registerButton) {
-        _registerButton = [[UIButton alloc] init];
-        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
-        [_registerButton setBackgroundImage:[UIImage imageNamed:@"common_button_white_disable"] forState:UIControlStateNormal];
-        [_registerButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-        [_registerButton sizeToFit];
+        _registerButton = [[UIButton alloc] initWithTitle:@"注册" andColor:[UIColor orangeColor] andBgImageName:@"common_button_white_disable"];
     }
     return _registerButton;
 }
 
 - (UIButton *)loginButton {
     if (!_loginButton) {
-        _loginButton = [[UIButton alloc] init];
-        [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
-        [_loginButton setBackgroundImage:[UIImage imageNamed:@"common_button_white_disable"] forState:UIControlStateNormal];
-        [_loginButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [_loginButton sizeToFit];
+        _loginButton = [[UIButton alloc] initWithTitle:@"登录" andColor:[UIColor darkGrayColor] andBgImageName:@"common_button_white_disable"];
     }
     return _loginButton;
+}
+
+#pragma mark 按钮监听方法
+- (void)loginClicked {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(visitorViewDidLogin)]) {
+        [self.delegate visitorViewDidLogin];
+    }
+}
+
+- (void)registerClicked {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(visitorViewDidRegistser)]) {
+        [self.delegate visitorViewDidRegistser];
+    }
 }
 
 #pragma mark 重写构造函数
@@ -125,6 +124,10 @@
     [self addSubview:self.loginButton];
     
     [self appleNativeLayout];
+    
+    // 给按钮添加监听方法
+    [self.loginButton addTarget:self action:@selector(loginClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.registerButton addTarget:self action:@selector(registerClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)appleNativeLayout {

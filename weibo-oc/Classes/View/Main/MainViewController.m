@@ -65,8 +65,8 @@
 
 - (void)addAllChildVC {
     // 设置 tintColor - 图片渲染颜色, 如果在 AppDelegate 里设置了全局渲染，那么这里就不用渲染了
+//    self.tabBar.tintColor = [UIColor orangeColor];
     // 性能提升技巧 - 如果能用颜色解决，就不建议使用图片
-    self.tabBar.tintColor = [UIColor orangeColor];
     [self addChildVC:[[HomeTableViewController alloc] init] withTitle:@"首页" withImageName:@"tabbar_home"];
     [self addChildVC:[[MessageTableViewController alloc] init] withTitle:@"消息" withImageName:@"tabbar_message_center"];
     // 添加一个空白占位 controller 到 tab bar 中

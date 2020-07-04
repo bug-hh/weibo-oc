@@ -1,0 +1,21 @@
+//
+//  Common.pch
+//  weibo-oc
+//
+//  Created by 彭豪辉 on 2020/7/4.
+//  Copyright © 2020 bughh. All rights reserved.
+//
+
+#ifndef Common_pch
+#define Common_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Common_pch */
+
+#ifdef __OBJC__
+
+#define WBAppearanceTintColor [UIColor orangeColor]
+#endif
+

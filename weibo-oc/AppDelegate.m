@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupAppearance];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[MainViewController alloc] init];
@@ -25,6 +26,14 @@
     return YES;
 }
 
+#pragma mark - 设置全局外观
+// 设置全局外观，在很多应用程序中，都会在 AppDelegate 中设置所有控件的全局外观
+- (void)setupAppearance {
+    //        修改导航栏的全局外观，要在控件创建之前设置，一经设置，全局有效
+    UINavigationBar.appearance.tintColor = WBAppearanceTintColor;
+    UITabBar.appearance.tintColor = WBAppearanceTintColor;
+    
+}
 
 #pragma mark - UISceneSession lifecycle
 

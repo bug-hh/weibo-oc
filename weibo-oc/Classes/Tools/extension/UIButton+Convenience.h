@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIButton (Convenience)
 
 - (instancetype)initWithImageName:(NSString*)imageName andBackgroundImageName:(NSString*)bg;
+- (instancetype)initWithTitle:(NSString *)title andColor:(UIColor *)color andBgImageName:(NSString *)imageName;
 
 @end
 

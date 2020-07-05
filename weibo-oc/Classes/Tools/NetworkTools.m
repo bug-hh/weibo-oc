@@ -34,7 +34,6 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
 @property(copy, nonatomic) NSString *appKey;
 @property(copy, nonatomic) NSString *appSecret;
 @property(copy, nonatomic) NSString *redirectUrl;
-@property(copy, nonatomic) NSString *oauthURL;
 
 @end
 
@@ -54,7 +53,7 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
 
 - (NSString *)oauthURL {
     if (!_oauthURL) {
-        _oauthURL = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@", self.appKey, self.appSecret];
+        _oauthURL = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@", self.appKey, self.redirectUrl];
     }
     return _oauthURL;
 }
@@ -72,8 +71,31 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
     return instance;
 }
 
+#pragma mark 获取用户信息
+- (void)loadUserInfoWithUid:(NSString*)uid andAccessToken:(NSString*)accessToken finish:(finish)finished {
+    // 创建参数字典
+    NSDictionary *parameters = @{
+        @"uid": uid,
+        @"access_token": accessToken
+    };
+    NSString *url = @"https://api.weibo.com/2/users/show.json";
+    [self request:GET andUrl:url andParameters:parameters andFinish:finished];
+    
+    
+}
 # pragma mark - OAuth 相关方法
-- (void)accessTokenWithCode:(NSString*)code andFinish:(^()())
+- (void)accessTokenWithCode:(NSString*)code andFinish:(finish)finished {
+    NSString *url = @"https://api.weibo.com/oauth2/access_token";
+    NSDictionary *parameters = @{
+        @"client_id": @"3305836468",
+        @"client_secret": @"e75ef60521e249f5dd2882d288c98907",
+        @"grant_type": @"authorization_code",
+        @"code": code,
+        @"redirect_uri": @"https://bug-hh.github.io/bughh.github.io/"
+    };
+    
+    [self request:POST andUrl:url andParameters:parameters andFinish:finished];
+}
 
 # pragma mark - 封装 AFN 网络方法
 - (void)request:(HHRequestMethod)httpMethod andUrl:(NSString *)url andParameters:(NSDictionary *)dict andFinish:(finish)finished {

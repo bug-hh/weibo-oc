@@ -10,6 +10,8 @@
 #import <SVProgressHUD.h>
 
 #import "OAuthViewController.h"
+#import "NetworkTools.h"
+#import "UserAccount.h"
 
 
 @interface OAuthViewController () <WKNavigationDelegate>
@@ -43,7 +45,8 @@
 }
 
 - (void)autoFill {
-    NSString *js1 = @"document.getElementById('userId').value = '13167302688'";
+    NSLog(@"autoFill");
+    NSString *js1 = @"document.getElementById('userId').value = '13167302688';";
     NSString *js2 = @"document.getElementById('passwd').value = 'phh!!0905'";
     NSString *script = [NSString stringWithFormat:@"%@%@", js1, js2];
     [self.webView evaluateJavaScript:script completionHandler:nil];
@@ -53,13 +56,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.webView.navigationDelegate = self;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:NetworkTools.sharedTools.oauthURL]];
+    [self.webView loadRequest:request];
 }
 
 #pragma mark - WKNavigationDelegate 代理方法
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     // 先判断 host 是否为给定的回调地址
     if (!(webView.URL.host && [webView.URL.host isEqualToString:@"bug-hh.github.io"])) {
-        decisionHandler(WKNavigationActionPolicyCancel);
+        decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
     
@@ -76,8 +81,34 @@
     NSString *code = [query substringFromIndex:5];
     // 根据授权码，获取 accessToken
     NSLog(@"code = %@", code);
+    [NetworkTools.sharedTools accessTokenWithCode:code andFinish:^(id  _Nullable response, NSError * _Nullable error) {
+        if (response) {
+            NSDictionary *dict = (NSDictionary*)response;
+            UserAccount *userAccount = [[UserAccount alloc] initWithDict:dict];
+            [self loadUserInfoWithUserAccount:userAccount];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
     
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
+#pragma mark - 获取用户信息
+- (void)loadUserInfoWithUserAccount:(UserAccount*)userAccount {
+    [NetworkTools.sharedTools loadUserInfoWithUid:userAccount.uid andAccessToken:userAccount.access_token finish:^(id  _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"出错了");
+            return;
+        }
+        
+        NSDictionary *dict = (NSDictionary*)response;
+
+        userAccount.screen_name = dict[@"screen_name"];
+        userAccount.avatar_large = dict[@"avatar_large"];
+        [userAccount saveUserAccount];
+        NSLog(@"%@", userAccount);
+    }];
+}
 
 @end

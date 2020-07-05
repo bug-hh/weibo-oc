@@ -14,7 +14,12 @@ typedef void(^finish)(id __nullable response, NSError * _Nullable error);
 
 @interface NetworkTools : AFHTTPSessionManager
 
+@property(copy, nonatomic) NSString *oauthURL;
+
 + (instancetype)sharedTools;
+- (void)accessTokenWithCode:(NSString*)code andFinish:(finish)finished;
+- (void)loadUserInfoWithUid:(NSString*)uid andAccessToken:(NSString*)accessToken finish:(finish)finished;
+
 
 @end
 

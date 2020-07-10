@@ -18,6 +18,9 @@
 }
 
 - (void)setExpires_in:(NSTimeInterval)expires_in {
+    // 不能写成下面这样，因为现在对象还没有创建出来，self 为 nil，会崩溃
+//    self.expires_in = expires_in
+    _expires_in = expires_in;
     self.expireDate = [NSDate dateWithTimeIntervalSinceNow:self.expires_in];
 }
 
@@ -32,26 +35,13 @@
     
 }
 
-#pragma mark 保存用户信息
-- (void)saveUserAccount {
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    path = [path stringByAppendingPathComponent:@"account.plist"];
-    NSLog(@"保存用户信息：%@", path);
-    BOOL ret = [NSKeyedArchiver archiveRootObject:self toFile:path];
-    if (ret) {
-        NSLog(@"保存成功");
-    } else {
-        NSLog(@"保存失败");
-    }
-}
-
 #pragma mark NSCoding 协议方法
 - (void)encodeWithCoder:(nonnull NSCoder *)coder {
     [coder encodeObject:self.access_token forKey:@"access_token"];
     [coder encodeObject:self.expireDate forKey:@"expireDate"];
     [coder encodeObject:self.uid forKey:@"uid"];
     [coder encodeObject:self.screen_name forKey: @"screen_name"];
-    [coder encodeObject:self.avatar_large forKey: @"avatarLarge"];
+    [coder encodeObject:self.avatar_large forKey: @"avatar_large"];
 }
 
 - (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {

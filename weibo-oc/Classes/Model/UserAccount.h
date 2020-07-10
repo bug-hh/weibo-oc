@@ -21,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nonatomic, nullable) NSString* avatar_large;
 
 - (instancetype)initWithDict:(NSDictionary*)dict;
-- (void)saveUserAccount;
-
 @end
 
 NS_ASSUME_NONNULL_END

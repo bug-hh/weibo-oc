@@ -9,6 +9,7 @@
 #import "VisitorTableViewController.h"
 #import "VisitorView.h"
 #import "OAuthViewController.h"
+#import "UserAccountViewModel.h"
 
 @interface VisitorTableViewController ()
 
@@ -20,7 +21,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.isUserLogin = NO;
+        self.isUserLogin = NO; //UserAccountViewModel.sharedViewModel.userLogin;
     }
     return self;
 }

@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UserAccountViewModel.h"
+#import "NewFeatureViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +24,8 @@
     [self setupAppearance];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[MainViewController alloc] init];
+//    self.window.rootViewController = [[MainViewController alloc] init];
+    self.window.rootViewController = [[WelcomeViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

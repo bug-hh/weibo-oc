@@ -8,6 +8,9 @@
 
 #import "VisitorView.h"
 
+#import <SnapKit-Swift.h>
+#import <SnapKit/SnapKit-umbrella.h>
+
 @interface VisitorView ()
 
 @property (strong, nonatomic) UIImageView *iconView;

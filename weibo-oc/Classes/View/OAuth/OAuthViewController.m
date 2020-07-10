@@ -12,6 +12,7 @@
 #import "OAuthViewController.h"
 #import "NetworkTools.h"
 #import "UserAccount.h"
+#import "UserAccountViewModel.h"
 
 
 @interface OAuthViewController () <WKNavigationDelegate>
@@ -81,34 +82,15 @@
     NSString *code = [query substringFromIndex:5];
     // 根据授权码，获取 accessToken
     NSLog(@"code = %@", code);
-    [NetworkTools.sharedTools accessTokenWithCode:code andFinish:^(id  _Nullable response, NSError * _Nullable error) {
-        if (response) {
-            NSDictionary *dict = (NSDictionary*)response;
-            UserAccount *userAccount = [[UserAccount alloc] initWithDict:dict];
-            [self loadUserInfoWithUserAccount:userAccount];
+    [UserAccountViewModel.sharedViewModel loadAccessTokenWithCode:code andFinish:^(bool isSuccessed) {
+        if (isSuccessed) {
+            NSLog(@"获取授权码成功");
+            NSLog(@"%@", UserAccountViewModel.sharedViewModel.userAccount);
         } else {
-            NSLog(@"%@", error);
+            NSLog(@"获取授权码失败");
         }
     }];
-    
     decisionHandler(WKNavigationActionPolicyAllow);
-}
-
-#pragma mark - 获取用户信息
-- (void)loadUserInfoWithUserAccount:(UserAccount*)userAccount {
-    [NetworkTools.sharedTools loadUserInfoWithUid:userAccount.uid andAccessToken:userAccount.access_token finish:^(id  _Nullable response, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"出错了");
-            return;
-        }
-        
-        NSDictionary *dict = (NSDictionary*)response;
-
-        userAccount.screen_name = dict[@"screen_name"];
-        userAccount.avatar_large = dict[@"avatar_large"];
-        [userAccount saveUserAccount];
-        NSLog(@"%@", userAccount);
-    }];
 }
 
 @end

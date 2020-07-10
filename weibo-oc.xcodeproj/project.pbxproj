@@ -14,6 +14,8 @@
 		6696AF5224B088F800163399 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696AF5124B088F800163399 /* OAuthViewController.m */; };
 		68FA5C7824B161A2003C9E9E /* UserAccountViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5C7724B161A2003C9E9E /* UserAccountViewModel.m */; };
 		68FA5C7B24B16444003C9E9E /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5C7A24B16444003C9E9E /* UserAccount.m */; };
+		68FA5CD724B74AEE003C9E9E /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CD624B74AEE003C9E9E /* NewFeatureViewController.m */; };
+		68FA5CDA24B7CCF1003C9E9E /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CD924B7CCF1003C9E9E /* WelcomeViewController.m */; };
 		68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */; };
 		68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */; };
 		68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBA824AD2E04004F1A75 /* Assets.xcassets */; };
@@ -46,6 +48,10 @@
 		68FA5C7724B161A2003C9E9E /* UserAccountViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAccountViewModel.m; sourceTree = "<group>"; };
 		68FA5C7924B16444003C9E9E /* UserAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAccount.h; sourceTree = "<group>"; };
 		68FA5C7A24B16444003C9E9E /* UserAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAccount.m; sourceTree = "<group>"; };
+		68FA5CD524B74AEE003C9E9E /* NewFeatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFeatureViewController.h; sourceTree = "<group>"; };
+		68FA5CD624B74AEE003C9E9E /* NewFeatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeatureViewController.m; sourceTree = "<group>"; };
+		68FA5CD824B7CCF1003C9E9E /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		68FA5CD924B7CCF1003C9E9E /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		68FFBB9924AD2E00004F1A75 /* weibo-oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weibo-oc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +100,17 @@
 				D913ED6AAAB54DC6683E43C2 /* Pods_weibo_oc.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68FA5CD424B74ACB003C9E9E /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				68FA5CD524B74AEE003C9E9E /* NewFeatureViewController.h */,
+				68FA5CD624B74AEE003C9E9E /* NewFeatureViewController.m */,
+				68FA5CD824B7CCF1003C9E9E /* WelcomeViewController.h */,
+				68FA5CD924B7CCF1003C9E9E /* WelcomeViewController.m */,
+			);
+			path = NewFeature;
 			sourceTree = "<group>";
 		};
 		68FFBB9024AD2E00004F1A75 = {
@@ -241,6 +258,7 @@
 		68FFBBC024AD2F71004F1A75 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68FA5CD424B74ACB003C9E9E /* NewFeature */,
 				68FFBBDD24AE9943004F1A75 /* Visitor */,
 				68FFBBC124AD4A6B004F1A75 /* MainViewController.h */,
 				68FFBBC224AD4A6B004F1A75 /* MainViewController.m */,
@@ -399,6 +417,7 @@
 				68FA5C7824B161A2003C9E9E /* UserAccountViewModel.m in Sources */,
 				68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */,
 				68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */,
+				68FA5CDA24B7CCF1003C9E9E /* WelcomeViewController.m in Sources */,
 				68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */,
 				6696AF4F24B04F3400163399 /* NetworkTools.m in Sources */,
 				68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */,
@@ -406,6 +425,7 @@
 				68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */,
 				68FFBBAF24AD2E04004F1A75 /* main.m in Sources */,
 				68FFBBC624AD4A8C004F1A75 /* ProfileTableViewController.m in Sources */,
+				68FA5CD724B74AEE003C9E9E /* NewFeatureViewController.m in Sources */,
 				66547CF324B02F28002CD068 /* UILabel+Convenience.m in Sources */,
 				68FFBBC324AD4A6B004F1A75 /* MainViewController.m in Sources */,
 				66547CF624B030E3002CD068 /* UIImageView+Convenience.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "NetworkTools.h"
+#import "UserAccountViewModel.h"
 
 typedef enum NSUInteger {
     GET,
@@ -34,6 +35,7 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
 @property(copy, nonatomic) NSString *appKey;
 @property(copy, nonatomic) NSString *appSecret;
 @property(copy, nonatomic) NSString *redirectUrl;
+@property(copy, nonatomic) NSDictionary *tokenDict;
 
 @end
 
@@ -71,18 +73,25 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
     return instance;
 }
 
+- (NSDictionary *)tokenDict {
+    NSString *access_token = UserAccountViewModel.sharedViewModel.accessToken;
+    return access_token ? @{@"access_token": access_token} : nil;
+}
+
 #pragma mark 获取用户信息
-- (void)loadUserInfoWithUid:(NSString*)uid andAccessToken:(NSString*)accessToken finish:(finish)finished {
+- (void)loadUserInfoWithUid:(NSString*)uid finish:(finish)finished {
+    if (!self.tokenDict) {
+        finished(nil, [NSError errorWithDomain:@"com.bughh.weibo" code:-1001 userInfo:@{@"message": @"access token 为空"}]);
+        return;
+    }
+    
     // 创建参数字典
-    NSDictionary *parameters = @{
-        @"uid": uid,
-        @"access_token": accessToken
-    };
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:self.tokenDict];
+    parameters[@"uid"] = uid;
     NSString *url = @"https://api.weibo.com/2/users/show.json";
     [self request:GET andUrl:url andParameters:parameters andFinish:finished];
-    
-    
 }
+
 # pragma mark - OAuth 相关方法
 - (void)accessTokenWithCode:(NSString*)code andFinish:(finish)finished {
     NSString *url = @"https://api.weibo.com/oauth2/access_token";

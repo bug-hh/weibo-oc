@@ -19,7 +19,7 @@ typedef void(^finish)(id __nullable response, NSError * _Nullable error);
 + (instancetype)sharedTools;
 - (void)accessTokenWithCode:(NSString*)code andFinish:(finish)finished;
 - (void)loadUserInfoWithUid:(NSString*)uid finish:(finish)finished;
-
+- (void)loadStatusWithSinceId:(NSNumber*)sinceId andMaxId:(NSNumber*)maxId finishCallback:(finish)finished;
 
 @end
 

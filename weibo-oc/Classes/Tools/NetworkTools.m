@@ -78,6 +78,26 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
     return access_token ? @{@"access_token": access_token} : nil;
 }
 
+#pragma mark 获取用户微博数据
+/**
+     加载微博数据
+   * parameter since_id   若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
+   * parameter max_id   若指定此参数，则返回ID小于或等于max_id的微博，默认为0
+   * parameter finish  回调函数
+*/
+- (void)loadStatusWithSinceId:(NSNumber*)sinceId andMaxId:(NSNumber*)maxId finishCallback:(finish)finished {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    // 判断是否为下拉刷新
+    if (sinceId > 0) {
+        parameters[@"since_id"] = sinceId;
+    } else if (maxId > 0) {
+        // 加@()  变成 NSNumber 类型
+        parameters[@"max_id"] = @(maxId.intValue - 1);
+    }
+    NSString *url = @"https://api.weibo.com/2/statuses/home_timeline.json";
+    [self tokenRequest:GET andUrl:url andParameters:parameters andFinish:finished];
+}
+
 #pragma mark 获取用户信息
 - (void)loadUserInfoWithUid:(NSString*)uid finish:(finish)finished {
     if (!self.tokenDict) {
@@ -106,7 +126,31 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
     [self request:POST andUrl:url andParameters:parameters andFinish:finished];
 }
 
+
+
 # pragma mark - 封装 AFN 网络方法
+- (BOOL)appendToken:(NSMutableDictionary*)parameters {
+    NSString *token = UserAccountViewModel.sharedViewModel.accessToken;
+    
+    if (!token) {
+        return NO;
+    }
+    
+    if (!parameters) {
+        parameters = [NSMutableDictionary dictionary];
+    }
+    [parameters setValue:token forKey:@"access_token"];
+    return YES;
+}
+
+- (void)tokenRequest:(HHRequestMethod)httpMethod andUrl:(NSString *)url andParameters:(NSMutableDictionary *)parameters andFinish:(finish)finished {
+    if (![self appendToken:parameters]) {
+        finished(nil, [NSError errorWithDomain:@"com.bughh.error" code:1000 userInfo:@{@"message": @"无效 token"}]);
+        return;
+    }
+    [self request:httpMethod andUrl:url andParameters:parameters andFinish:finished];
+}
+
 - (void)request:(HHRequestMethod)httpMethod andUrl:(NSString *)url andParameters:(NSDictionary *)dict andFinish:(finish)finished {
     NSString *method = httpMethod == GET ? @"GET" : @"POST";
     // 虽然 NetworkTools 本身没有实现这个方法，但是它的父类实现了，那么就正好调用了父类（AFN 框架）的实现

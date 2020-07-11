@@ -108,6 +108,8 @@
         [UIView animateWithDuration:2.0 animations:^{
             self.welcomeLabel.alpha = 1;
         } completion:^(BOOL finished) {
+            // 动画完成后，发送通知给 AppDelegate，让它切换控制器
+            [NSNotificationCenter.defaultCenter postNotificationName:WBSwitchRootViewControllerNotification object:nil];
         }];
     }];
     

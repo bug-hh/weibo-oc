@@ -106,7 +106,6 @@
         } else {
             NSLog(@"保存用户信息失败");
         }
-        
         finished(true);
     }];
 }

@@ -21,7 +21,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.isUserLogin = NO; //UserAccountViewModel.sharedViewModel.userLogin;
+        self.isUserLogin = UserAccountViewModel.sharedViewModel.userLogin;
     }
     return self;
 }

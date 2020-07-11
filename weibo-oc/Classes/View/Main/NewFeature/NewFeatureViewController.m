@@ -87,6 +87,7 @@
 #pragma mark 「开始体验」点击事件
 - (void)startButtonClicked {
     NSLog(@"立即体验");
+    [NSNotificationCenter.defaultCenter postNotificationName:WBSwitchRootViewControllerNotification object:nil];
 }
 
 @end

@@ -16,6 +16,13 @@
 		68FA5C7B24B16444003C9E9E /* UserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5C7A24B16444003C9E9E /* UserAccount.m */; };
 		68FA5CD724B74AEE003C9E9E /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CD624B74AEE003C9E9E /* NewFeatureViewController.m */; };
 		68FA5CDA24B7CCF1003C9E9E /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CD924B7CCF1003C9E9E /* WelcomeViewController.m */; };
+		68FA5CDD24BAAA29003C9E9E /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CDC24BAAA29003C9E9E /* Status.m */; };
+		68FA5CE024BAB850003C9E9E /* StatusListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CDF24BAB850003C9E9E /* StatusListViewModel.m */; };
+		68FA5CE324BAC6CC003C9E9E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CE224BAC6CC003C9E9E /* User.m */; };
+		68FA5CE624BACBD6003C9E9E /* StatusWeiboViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CE524BACBD6003C9E9E /* StatusWeiboViewModel.m */; };
+		68FA5CEA24BAD043003C9E9E /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CE924BAD043003C9E9E /* StatusCell.m */; };
+		68FA5CED24BAD077003C9E9E /* StatusCellTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CEC24BAD077003C9E9E /* StatusCellTopView.m */; };
+		68FA5CF024BAD093003C9E9E /* StatusCellBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CEF24BAD093003C9E9E /* StatusCellBottomView.m */; };
 		68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */; };
 		68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */; };
 		68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBA824AD2E04004F1A75 /* Assets.xcassets */; };
@@ -52,6 +59,20 @@
 		68FA5CD624B74AEE003C9E9E /* NewFeatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeatureViewController.m; sourceTree = "<group>"; };
 		68FA5CD824B7CCF1003C9E9E /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		68FA5CD924B7CCF1003C9E9E /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		68FA5CDB24BAAA29003C9E9E /* Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		68FA5CDC24BAAA29003C9E9E /* Status.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		68FA5CDE24BAB850003C9E9E /* StatusListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusListViewModel.h; sourceTree = "<group>"; };
+		68FA5CDF24BAB850003C9E9E /* StatusListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusListViewModel.m; sourceTree = "<group>"; };
+		68FA5CE124BAC6CC003C9E9E /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		68FA5CE224BAC6CC003C9E9E /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		68FA5CE424BACBD6003C9E9E /* StatusWeiboViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusWeiboViewModel.h; sourceTree = "<group>"; };
+		68FA5CE524BACBD6003C9E9E /* StatusWeiboViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusWeiboViewModel.m; sourceTree = "<group>"; };
+		68FA5CE824BAD043003C9E9E /* StatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
+		68FA5CE924BAD043003C9E9E /* StatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
+		68FA5CEB24BAD077003C9E9E /* StatusCellTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusCellTopView.h; sourceTree = "<group>"; };
+		68FA5CEC24BAD077003C9E9E /* StatusCellTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusCellTopView.m; sourceTree = "<group>"; };
+		68FA5CEE24BAD093003C9E9E /* StatusCellBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusCellBottomView.h; sourceTree = "<group>"; };
+		68FA5CEF24BAD093003C9E9E /* StatusCellBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusCellBottomView.m; sourceTree = "<group>"; };
 		68FFBB9924AD2E00004F1A75 /* weibo-oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weibo-oc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +134,19 @@
 			path = NewFeature;
 			sourceTree = "<group>";
 		};
+		68FA5CE724BAD00E003C9E9E /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				68FA5CE824BAD043003C9E9E /* StatusCell.h */,
+				68FA5CE924BAD043003C9E9E /* StatusCell.m */,
+				68FA5CEB24BAD077003C9E9E /* StatusCellTopView.h */,
+				68FA5CEC24BAD077003C9E9E /* StatusCellTopView.m */,
+				68FA5CEE24BAD093003C9E9E /* StatusCellBottomView.h */,
+				68FA5CEF24BAD093003C9E9E /* StatusCellBottomView.m */,
+			);
+			path = StatusCell;
+			sourceTree = "<group>";
+		};
 		68FFBB9024AD2E00004F1A75 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +197,10 @@
 			children = (
 				68FA5C7924B16444003C9E9E /* UserAccount.h */,
 				68FA5C7A24B16444003C9E9E /* UserAccount.m */,
+				68FA5CDB24BAAA29003C9E9E /* Status.h */,
+				68FA5CDC24BAAA29003C9E9E /* Status.m */,
+				68FA5CE124BAC6CC003C9E9E /* User.h */,
+				68FA5CE224BAC6CC003C9E9E /* User.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +210,10 @@
 			children = (
 				68FA5C7624B161A2003C9E9E /* UserAccountViewModel.h */,
 				68FA5C7724B161A2003C9E9E /* UserAccountViewModel.m */,
+				68FA5CDE24BAB850003C9E9E /* StatusListViewModel.h */,
+				68FA5CDF24BAB850003C9E9E /* StatusListViewModel.m */,
+				68FA5CE424BACBD6003C9E9E /* StatusWeiboViewModel.h */,
+				68FA5CE524BACBD6003C9E9E /* StatusWeiboViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +264,7 @@
 		68FFBBBC24AD2F48004F1A75 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				68FA5CE724BAD00E003C9E9E /* StatusCell */,
 				68FFBBCD24AD4ADE004F1A75 /* HomeTableViewController.h */,
 				68FFBBCE24AD4ADE004F1A75 /* HomeTableViewController.m */,
 			);
@@ -418,20 +461,27 @@
 				68FFBBCC24AD4ACF004F1A75 /* DiscoveryTableViewController.m in Sources */,
 				68FFBBD524AD4AFE004F1A75 /* ComposeTableViewController.m in Sources */,
 				68FA5CDA24B7CCF1003C9E9E /* WelcomeViewController.m in Sources */,
+				68FA5CEA24BAD043003C9E9E /* StatusCell.m in Sources */,
 				68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */,
+				68FA5CE624BACBD6003C9E9E /* StatusWeiboViewModel.m in Sources */,
 				6696AF4F24B04F3400163399 /* NetworkTools.m in Sources */,
 				68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */,
 				68FFBBDC24AE8E9B004F1A75 /* UIButton+Convenience.m in Sources */,
 				68FFBBCF24AD4ADE004F1A75 /* HomeTableViewController.m in Sources */,
 				68FFBBAF24AD2E04004F1A75 /* main.m in Sources */,
+				68FA5CE324BAC6CC003C9E9E /* User.m in Sources */,
 				68FFBBC624AD4A8C004F1A75 /* ProfileTableViewController.m in Sources */,
+				68FA5CDD24BAAA29003C9E9E /* Status.m in Sources */,
+				68FA5CE024BAB850003C9E9E /* StatusListViewModel.m in Sources */,
 				68FA5CD724B74AEE003C9E9E /* NewFeatureViewController.m in Sources */,
 				66547CF324B02F28002CD068 /* UILabel+Convenience.m in Sources */,
 				68FFBBC324AD4A6B004F1A75 /* MainViewController.m in Sources */,
 				66547CF624B030E3002CD068 /* UIImageView+Convenience.m in Sources */,
+				68FA5CED24BAD077003C9E9E /* StatusCellTopView.m in Sources */,
 				68FFBBE024AE996D004F1A75 /* VisitorTableViewController.m in Sources */,
 				68FA5C7B24B16444003C9E9E /* UserAccount.m in Sources */,
 				68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */,
+				68FA5CF024BAD093003C9E9E /* StatusCellBottomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

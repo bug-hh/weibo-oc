@@ -89,10 +89,10 @@ downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgr
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     // 判断是否为下拉刷新
     if (sinceId > 0) {
-        parameters[@"since_id"] = sinceId;
+        parameters[@"since_id"] = @(sinceId.longValue);
     } else if (maxId > 0) {
         // 加@()  变成 NSNumber 类型
-        parameters[@"max_id"] = @(maxId.intValue - 1);
+        parameters[@"max_id"] = @(maxId.longValue - 1);
     }
     NSString *url = @"https://api.weibo.com/2/statuses/home_timeline.json";
     [self tokenRequest:GET andUrl:url andParameters:parameters andFinish:finished];

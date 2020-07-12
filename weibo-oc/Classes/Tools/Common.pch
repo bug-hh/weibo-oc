@@ -16,7 +16,18 @@
 
 #ifdef __OBJC__
 
+#import "UILabel+Convenience.h"
+#import "UIButton+Convenience.h"
+#import "UIImageView+Convenience.h"
+
 #define WBAppearanceTintColor [UIColor orangeColor]
 #define WBSwitchRootViewControllerNotification @"WBSwitchRootViewControllerNotification"
+#define StatusCellNormalID @"StatusCellNormalID"
+
+// 微博 cell 中控件的间距
+#define StatusCellMargin 15
+// 微博头像宽度
+#define StatusCellIconWidth 35
+
 #endif
 

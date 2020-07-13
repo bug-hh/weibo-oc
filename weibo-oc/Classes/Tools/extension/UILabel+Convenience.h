@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (Convenience)
 
+- (instancetype)initWithTitle:(NSString*)title andFontSize:(CGFloat)fontSize andColor:(UIColor*)color screenInset:(CGFloat)screenInset;
 - (instancetype)initWithTitle:(NSString*)title andFontSize:(CGFloat)fontSize andColor:(UIColor*)color;
 
 @end

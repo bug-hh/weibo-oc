@@ -16,9 +16,12 @@
 
 #ifdef __OBJC__
 
+
 #import "UILabel+Convenience.h"
 #import "UIButton+Convenience.h"
 #import "UIImageView+Convenience.h"
+#import <UIImageView+AFNetworking.h>
+
 
 #define WBAppearanceTintColor [UIColor orangeColor]
 #define WBSwitchRootViewControllerNotification @"WBSwitchRootViewControllerNotification"

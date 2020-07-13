@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StatusWeiboViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StatusCellTopView : UIView
+
+@property(strong, nonatomic) StatusWeiboViewModel *viewModel;
 
 @end
 

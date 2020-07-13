@@ -31,6 +31,16 @@
 
 #pragma mark - 懒加载控件
 
+- (void)setViewModel:(StatusWeiboViewModel *)viewModel {
+    _viewModel = viewModel;
+    [self.nameLabel setText:viewModel.status.user.screen_name];
+    [self.iconView setImageWithURL:viewModel.userIconUrl placeholderImage:viewModel.defaultIconImage];
+    [self.memberIcon setImage:viewModel.userMemberIcon];
+    [self.vipIcon setImage:viewModel.userVipIcon];
+    [self.timeLabel setText:viewModel.created_at];
+    [self.sourceLabel setText:viewModel.status.source];
+}
+
 - (UIView *)sepView {
     if (!_sepView) {
         _sepView = [[UIView alloc] init];

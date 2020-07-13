@@ -102,7 +102,7 @@
     updateIconViewCon.constant = -self.view.bounds.size.height + 200;
     
     self.welcomeLabel.alpha = 0;
-    [UIView animateWithDuration:3 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:10 options:0 animations:^{
+    [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:10 options:0 animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:2.0 animations:^{

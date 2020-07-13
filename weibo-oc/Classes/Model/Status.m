@@ -7,6 +7,7 @@
 //
 
 #import "Status.h"
+#import "NSString+Sina.h"
 
 @implementation Status
 
@@ -25,7 +26,12 @@
     if ([key isEqualToString:@"user"]) {
         self.user = [User userWithDict:value];
         return;
+    } else if ([key isEqualToString:@"source"]) {
+        NSString *temp = [(NSString*)value href];
+        self.source = temp;
+        return;
     }
+    
     [super setValue:value forKey:key];
 }
 
@@ -37,7 +43,8 @@
 
 - (NSString *)description
 {
-    NSArray *arr = @[@"ID", @"text", @"create_at", @"source", @"user"];
+//    NSArray *arr = @[@"ID", @"text", @"created_at", @"source", @"user"];
+    NSArray *arr = @[@"created_at"];
     return [self dictionaryWithValuesForKeys:arr].description;
 }
 

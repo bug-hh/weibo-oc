@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 微博内容
 @property(copy, nonatomic) NSString *text;
 // 微博创建时间
-@property(copy, nonatomic) NSString *create_at;
+@property(copy, nonatomic) NSString *created_at;
 // 微博来源
 @property(copy, nonatomic) NSString *source;
 // 用户模型

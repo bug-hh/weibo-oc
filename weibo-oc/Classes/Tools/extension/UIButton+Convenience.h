@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithImageName:(NSString*)imageName andBackgroundImageName:(NSString*)bg;
 - (instancetype)initWithTitle:(NSString *)title andColor:(UIColor *)color andBgImageName:(NSString *)imageName;
+- (instancetype)initWithForegroundImageName:(NSString*)fgName andTitle:(NSString*)title andFontSize:(CGFloat)fontSize;
 
 @end
 

@@ -31,4 +31,15 @@
     return self;
 }
 
+- (instancetype)initWithForegroundImageName:(NSString *)fgName andTitle:(NSString *)title andFontSize:(CGFloat)fontSize {
+    if (self = [super init]) {
+        [self setImage:[UIImage imageNamed:fgName] forState:UIControlStateNormal];
+        [self setTitle:title forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        self.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+        [self sizeToFit];
+    }
+    return self;
+}
+
 @end

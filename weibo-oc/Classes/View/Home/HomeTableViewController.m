@@ -50,7 +50,6 @@
             [SVProgressHUD showWithStatus:@"加载数据错误，请稍后重试"];
             return;
         }
-        NSLog(@"%@", self.listViewModel.statusList);
         [self.tableView reloadData];
     }];
 }
@@ -59,8 +58,9 @@
 - (void)prepareTableView {
     // 注册可重用 cell
     [self.tableView registerClass:StatusCell.class forCellReuseIdentifier:StatusCellNormalID];
-    // 临时行高
-    self.tableView.rowHeight = 200;
+    // 自动计算行高
+    self.tableView.estimatedRowHeight = 200;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 #pragma mark - Table view data source

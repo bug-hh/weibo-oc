@@ -23,6 +23,8 @@
 		68FA5CEA24BAD043003C9E9E /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CE924BAD043003C9E9E /* StatusCell.m */; };
 		68FA5CED24BAD077003C9E9E /* StatusCellTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CEC24BAD077003C9E9E /* StatusCellTopView.m */; };
 		68FA5CF024BAD093003C9E9E /* StatusCellBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CEF24BAD093003C9E9E /* StatusCellBottomView.m */; };
+		68FA5CF324BB62C8003C9E9E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CF224BB62C8003C9E9E /* NSDate+Extension.m */; };
+		68FA5CF624BB6A90003C9E9E /* NSString+Sina.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA5CF524BB6A90003C9E9E /* NSString+Sina.m */; };
 		68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */; };
 		68FFBBA124AD2E00004F1A75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBBA024AD2E00004F1A75 /* SceneDelegate.m */; };
 		68FFBBA924AD2E04004F1A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFBBA824AD2E04004F1A75 /* Assets.xcassets */; };
@@ -73,6 +75,10 @@
 		68FA5CEC24BAD077003C9E9E /* StatusCellTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusCellTopView.m; sourceTree = "<group>"; };
 		68FA5CEE24BAD093003C9E9E /* StatusCellBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusCellBottomView.h; sourceTree = "<group>"; };
 		68FA5CEF24BAD093003C9E9E /* StatusCellBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusCellBottomView.m; sourceTree = "<group>"; };
+		68FA5CF124BB62C8003C9E9E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		68FA5CF224BB62C8003C9E9E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		68FA5CF424BB6A90003C9E9E /* NSString+Sina.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Sina.h"; sourceTree = "<group>"; };
+		68FA5CF524BB6A90003C9E9E /* NSString+Sina.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sina.m"; sourceTree = "<group>"; };
 		68FFBB9924AD2E00004F1A75 /* weibo-oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weibo-oc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFBB9C24AD2E00004F1A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FFBB9D24AD2E00004F1A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -318,6 +324,10 @@
 				66547CF224B02F28002CD068 /* UILabel+Convenience.m */,
 				66547CF424B030E3002CD068 /* UIImageView+Convenience.h */,
 				66547CF524B030E3002CD068 /* UIImageView+Convenience.m */,
+				68FA5CF124BB62C8003C9E9E /* NSDate+Extension.h */,
+				68FA5CF224BB62C8003C9E9E /* NSDate+Extension.m */,
+				68FA5CF424BB6A90003C9E9E /* NSString+Sina.h */,
+				68FA5CF524BB6A90003C9E9E /* NSString+Sina.m */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -455,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FA5CF324BB62C8003C9E9E /* NSDate+Extension.m in Sources */,
 				6696AF5224B088F800163399 /* OAuthViewController.m in Sources */,
 				68FFBBE324AE9D74004F1A75 /* VisitorView.m in Sources */,
 				68FA5C7824B161A2003C9E9E /* UserAccountViewModel.m in Sources */,
@@ -463,6 +474,7 @@
 				68FA5CDA24B7CCF1003C9E9E /* WelcomeViewController.m in Sources */,
 				68FA5CEA24BAD043003C9E9E /* StatusCell.m in Sources */,
 				68FFBBC924AD4ABC004F1A75 /* MessageTableViewController.m in Sources */,
+				68FA5CF624BB6A90003C9E9E /* NSString+Sina.m in Sources */,
 				68FA5CE624BACBD6003C9E9E /* StatusWeiboViewModel.m in Sources */,
 				6696AF4F24B04F3400163399 /* NetworkTools.m in Sources */,
 				68FFBB9E24AD2E00004F1A75 /* AppDelegate.m in Sources */,

@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface StatusWeiboViewModel : NSObject
 
 @property(strong, nonatomic) Status *status;
+@property(strong, nonatomic) NSURL *userIconUrl;
+@property(strong, nonatomic) UIImage *defaultIconImage;
+@property(strong, nonatomic) UIImage *userMemberIcon;
+@property(strong, nonatomic) UIImage *userVipIcon;
+@property(copy, nonatomic) NSString *created_at;
+
 
 - (instancetype)initWithStatus:(Status*)status;
 
